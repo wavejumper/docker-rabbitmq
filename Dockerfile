@@ -2,7 +2,7 @@ FROM phusion/baseimage:0.9.6
 
 ENV DEBIAN_FRONTEND noninteractive
  
-RUN echo "#!/bin/sh \n\n exit 101" > /usr/sbin/policy-rc.d
+RUN echo -e "#!/bin/sh \n\n exit 101" > /usr/sbin/policy-rc.d
 RUN chmod +x /usr/sbin/policy-rc.d
 
 RUN apt-get install -y wget
